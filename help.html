@@ -1,34 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MAH Miami Addiction Hotline</title>
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Addiction | one.</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <style>
+        /* Questionnaire button styling */
+        .questionnaire-container {
+            margin: 40px 0;
+            text-align: center;
+            padding: 25px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            border-left: 4px solid #ae1f1f;
+        }
+        
+        .questionnaire-container h2 {
+            color: #ae1f1f;
+            margin-top: 0;
+        }
+        
+        .questionnaire-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ae1f1f;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        .questionnaire-btn:hover {
+            background-color: #951a1a;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Add explicit styling for the logo link */
+        .logo-container {
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        
+        
+        /* Ensure logo-link is clickable */
+        .logo-link {
+            display: inline-block;
+            z-index: 100;
+            position: relative;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
   <article class="secondary">
     <section>
       <!-- Enhanced Navigation Example -->
-<nav>
-    <a href="index.html"><img src="img/logo.png" alt="MAH Logo" class="logo" /></a>
-    <ul>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="gambling.html" class="nav-link selected">Gambling Addiction</a></li>
-        <li><a href="social.html" class="nav-link">Social Media Addiction</a></li>
-        <li class="dropdown">
-            <a href="#" class="nav-link">Resources</a>
-            <div class="dropdown-content">
-                <a href="resources.html">All Resources</a>
-                <a href="counseling.html">Counseling Services</a>
-                <a href="self-help.html">Self-Help Tools</a>
-            </div>
-        </li>
-        <li><a href="help.html" class="nav-link">Find Help</a></li>
-    </ul>
-</nav>
+      <nav>
+        <!-- Direct simple logo link to avoid any interference -->
+        <div class="logo-container">
+            <a href="index.html" class="logo-link" onclick="window.location.href='index.html'; return false;">
+                <img src="img/logo.png" alt="MAH Logo" class="logo" />
+            </a>
+        </div>
+        
+        <ul>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="gambling.html" class="nav-link">Gambling Addiction</a></li>
+            <li><a href="social.html" class="nav-link selected">Social Media Addiction</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Resources</a>
+                <div class="dropdown-content">
+                    <a href="resources.html">All Resources</a>
+                    <a href="counseling.html">Counseling Services</a>
+                    <a href="self-help.html">Self-Help Tools</a>
+                </div>
+            </li>
+            <li><a href="help.html" class="nav-link">Find Help</a></li>
+        </ul>
+        
+        <!-- Keep hamburger button outside of potential conflict areas -->
+        <button class="hamburger">☰</button>
+    </nav>
       <h1>Find Help</h1>
       <p>If you or someone you know is struggling with gambling addiction, it's important to seek help. Here are some resources available:</p>
       <h2>National Resources</h2>
@@ -42,10 +109,56 @@
         <li><strong>Gamblers Anonymous Miami Meetings</strong>: Local meetings are available for those seeking support in the Miami area. Find more details at <a href="https://www.gamblersanonymous.org/ga/meetings" target="_blank">https://www.gamblersanonymous.org/ga/meetings</a>.</li>
       </ul>
       <h2>Additional Support</h2>
+      <div class="questionnaire-container">
+        <h2>Step one is really only one step away.</h2>
+        <p>Do not be afraid to reach out for help. People are there for you to listen and help, just reach out.</p>
+        <p>Do not be afraid to keep looking through the website and get more insight on how to improve.</p>
+        <a href="index.html" class="questionnaire-btn">Return Back to Home </a>
+        <a href="gambling.html" class="questionnaire-btn">Gambling Concern </a>
+        <a href="social.html" class="questionnaire-btn">Social Media Concern</a>
+    </div>
       <p>For more information and resources, visit the <a href="help.html">Help Page</a>.</p>
     </section>
   </article>
   <script defer src="js/script.js"></script>
+  <script>
+    // Force link redirect on the logo regardless of any other scripts
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add multiple event listeners to ensure at least one works
+        const logoImg = document.querySelector('.logo');
+        const logoLink = document.querySelector('.logo-link');
+        const logoContainer = document.querySelector('.logo-container');
+        
+        // Add click event to the logo image itself
+        if (logoImg) {
+            logoImg.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = 'index.html';
+            });
+        }
+        
+        // Add click event to the anchor
+        if (logoLink) {
+            logoLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = 'index.html';
+            });
+        }
+        
+        // Add click event to the container
+        if (logoContainer) {
+            logoContainer.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = 'index.html';
+            });
+        }
+        
+       
+    });
+    </script>
 </body>
 </html>
 
