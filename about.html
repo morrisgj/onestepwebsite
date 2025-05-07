@@ -101,6 +101,42 @@
             position: relative;
             text-decoration: none;
         }
+	     /* Featured image styling */
+          .featured-image-container {
+            margin: 25px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            display: inline-block;
+            float: right;
+            width: 45%;
+            max-width: 400px;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .featured-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-style: italic;
+            text-align: center;
+            margin-top: 0;
+        }
     </style>
 </head>
 
@@ -143,7 +179,10 @@
                 Hey — I’m Garrett Morris, a student at Miami University, and the person behind this website.
                 This project comes from a personal place. I created this space for students who are struggling with gambling and social media addiction because I’ve been there too.
             </p>
-
+<div class="featured-image-container">
+                <img src="img/headshot.png" alt="Students supporting each other" class="featured-image">
+                <p class="image-caption">Garrett Morris, Creator of one.</p>
+            </div>
             <p>
                 I started noticing a problem when it started affecting my life outside of my home — it started affecting the way I would interact with other people in my life. I grew to be a burden, I grew to be an annoyance, and I grew to be someone I didn't even like to have around.
                 This is where I knew that I had to do something. I spoke up and asked for help; I reached out to friends and family. I used my resources. This is where my website comes to life. Based on my own experience, I can get a grasp on what people need in times of struggle, like I was struggling.
