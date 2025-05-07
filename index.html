@@ -49,6 +49,42 @@
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+	     /* Featured image styling */
+        .featured-image-container {
+            margin: 25px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            display: inline-block;
+            float: right;
+            width: 45%;
+            max-width: 400px;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .featured-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-style: italic;
+            text-align: center;
+            margin-top: 0;
+        }
     </style>
 </head>
 
@@ -103,6 +139,10 @@
             <p>
                 This space was created with one goal: to support Miami University students navigating the challenges of gambling and social media addiction. College life can be exciting, but it also comes with pressures, distractions, and stress that can make unhealthy habits easy to fall into and hard to break.
             </p>
+		<div class="featured-image-container">
+                <img src="img/footer.jpg" alt="Students supporting each other" class="featured-image">
+                <p class="image-caption">Community support at Miami</p>
+            </div>
             <p>
                 We understand how overwhelming it can feel to be caught in patterns that affect your focus, your mental health, your relationships, and your future. Whether you're spending hours chasing wins on betting apps or scrolling endlessly on social media, this site is here to help you take back control.
             </p>
